@@ -1,7 +1,7 @@
 import express from 'express';
 import { connectDatabase } from './config/database.js';
 import { PORT } from './config/server.js';
-import bookRoutes from './routes/books.js';
+import { Bookrouter } from './routes/books.js';
 
 const app = express();
 
@@ -15,5 +15,5 @@ connectDatabase().then((connected) => {
     }
 });
 
-app.use(bookRoutes);
+app.use(Bookrouter);
 
