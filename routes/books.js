@@ -1,11 +1,11 @@
 import express from 'express';
 import { getBooks, createBook, updateBook, deleteBook } from '../controllers/bookscontroll.js';
 
-const router = express.Router();
+export const Bookrouter = express.Router();
 
-router.get('/getBooks', getBooks);
-router.post('/getBooks', createBook);
-router.put('/getBooks/:id', updateBook);
-router.delete('/getBooks/:id', deleteBook);
+Bookrouter.get('/getBooks', getBooks);
+Bookrouter.post('/getBooks', createBook);
+Bookrouter.put('/getBooks/:id', updateBook);
+Bookrouter.delete('/getBooks/:id', deleteBook);
 
-export default router;
+
